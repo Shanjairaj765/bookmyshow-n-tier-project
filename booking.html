@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMyShow - Ticket Booking</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <h1>Book Movie Ticket</h1>
+
+        <form action="#" method="post">
+
+            <label for="name">Customer Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <label for="movie">Select Movie</label>
+            <select id="movie" name="movie">
+                <option>Coolie</option>
+                <option>Leo</option>
+                <option>Jailer</option>
+                <option>Good Bad Ugly</option>
+            </select>
+
+            <label for="theatre">Select Theatre</label>
+            <select id="theatre" name="theatre">
+                <option>PVR</option>
+                <option>INOX</option>
+                <option>AGS</option>
+                <option>Rohini Silver Screens</option>
+            </select>
+
+            <label for="date">Show Date</label>
+            <input type="date" id="date" name="date">
+
+            <label for="time">Show Time</label>
+            <select id="time" name="time">
+                <option>10:00 AM</option>
+                <option>1:30 PM</option>
+                <option>5:00 PM</option>
+                <option>9:00 PM</option>
+            </select>
+
+            <label for="tickets">Number of Tickets</label>
+            <input type="number" id="tickets" name="tickets" min="1" max="10">
+
+            <label for="seat">Seat Type</label>
+            <select id="seat" name="seat">
+                <option>Regular</option>
+                <option>Premium</option>
+                <option>Recliner</option>
+            </select>
+
+            <br><br>
+
+            <button type="submit">Book Ticket</button>
+            <button type="reset">Clear</button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
