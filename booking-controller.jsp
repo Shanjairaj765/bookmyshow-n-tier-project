@@ -23,7 +23,7 @@ String showDate = request.getParameter("showDate");
 <p><b>Tickets:</b> <%= tickets %></p>
 <p><b>Show Date:</b> <%= showDate %></p>
 
-<a href="booking-form.jsp">Book Another Ticket</a>
+<a href="booking-list.jsp">View Booking List</a>
 
 </body>
 </html>
