@@ -1,29 +1,44 @@
-<%@ page language="java" %>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Booking Confirmation</title>
-</head>
-<body>
+<%@ page language="java" import="com.bookmyshow.*" %>
 
 <%
+String action = request.getParameter("action");
+String id = request.getParameter("id");
 String customerName = request.getParameter("customerName");
 String movieName = request.getParameter("movieName");
 String theatre = request.getParameter("theatre");
-String tickets = request.getParameter("tickets");
+int tickets = Integer.parseInt(request.getParameter("tickets"));
 String showDate = request.getParameter("showDate");
+
+if(action.equals("add")){
+
+    int bookingId = BookingManager.getAllBookings().size() + 1;
+
+    Booking booking = new Booking(
+        bookingId,
+        customerName,
+        movieName,
+        theatre,
+        tickets,
+        showDate
+    );
+
+    BookingManager.addBooking(booking);
+
+}
+else if(action.equals("update")){
+
+    Booking booking = new Booking(
+        Integer.parseInt(id),
+        customerName,
+        movieName,
+        theatre,
+        tickets,
+        showDate
+    );
+
+    BookingManager.updateBooking(booking);
+
+}
+
+response.sendRedirect("booking-list.jsp");
 %>
-
-<h2>Booking Successful!</h2>
-
-<p><b>Customer Name:</b> <%= customerName %></p>
-<p><b>Movie Name:</b> <%= movieName %></p>
-<p><b>Theatre:</b> <%= theatre %></p>
-<p><b>Tickets:</b> <%= tickets %></p>
-<p><b>Show Date:</b> <%= showDate %></p>
-
-<a href="booking-list.jsp">View Booking List</a>
-
-</body>
-</html>
