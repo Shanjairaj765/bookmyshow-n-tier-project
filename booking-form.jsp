@@ -42,7 +42,7 @@ value="<%= (booking==null) ? "" : booking.getId() %>">
     <label>Show Date:</label><br>
     <input type="date" name="showDate" value="<%=booking==null ? "" : booking.getShowDate() %>" required><br><br>
 
-    <input type="submit" value="<%=booking==null ? "Book Tickets" : "Update booking" %>">
+    <input type="submit" value="<%=booking==null ? "Book Ticket" : "Update Booking" %>">
 
 </form>
 
